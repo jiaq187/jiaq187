@@ -123,7 +123,7 @@
 
 
 
-  <title>归档 | 永无止境</title>
+  <title>NP复习-2 | 永无止境</title>
   
 
 
@@ -142,7 +142,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,111 +280,192 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 2 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/NP复习-2/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaqiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="永无止境">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/08/NP复习-2/" itemprop="url">
-              
-                <span itemprop="name">NP复习-2</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">NP复习-2</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-08T20:10:35+08:00"
-              content="2018-01-08" >
-          01-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T20:10:35+08:00">2018-01-08</time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/ccnp/" itemprop="url" rel="index">
+                    <span itemprop="name">ccnp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/08/NP复习-1/" itemprop="url">
-              
-                <span itemprop="name">NP复习-1</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-08T18:14:42+08:00"
-              content="2018-01-08" >
-          01-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p>ACL-访问控制列表<br>作用：控制流量（允许、拒绝）</p>
+<p>功能性：<br>1）允许、拒绝<br>2）能够执行的对象：3层、4层（源IP、目的IP、源端口、目的端口、协议号）</p>
+<p>种类：<br>1）标准ACL<br>access-list 1-99<br>只能抓源IP<br>2）扩展ACL<br>access-list 100-199<br>可以所有5个元素</p>
+<p>几个注意点：<br>1.所有ACL的最后面都有隐藏语句-deny any<br>2.ACL的执行是有顺序的<br>access-list 1 deny 192.168.1.1<br>access-list 1 permit 192.168.1.1<br>3.如何解决ACL修改问题——-用命名列表<br>ip access-list standard/extened 列表名-进入子模式<br>4.调用、调用、调用–接口下<br>ip access-group 列表号 in/out</p>
+<p>NAT<br>地址转换解决什么问题<br>1.上网<br>2.地址隐藏<br>3.地址冲突</p>
+<p>种类：<br>配置：<br>统一基础配置：<br>interface f0/x<br>    ip nat inside<br>interface f0/y<br>    ip nat outside<br>1.静态<br>转换方式：1vs1<br>ip nat inside source static 192.168.1.1 12.0.0.101<br>使用场景：服务器对外映射</p>
+<p>2.动态<br>access-list 1 permit 192.168.1.0 0.0.0.255<br>ip nat pool aaa 12.0.0.101 12.0.0.102 netmask 255.255.255.0<br>ip nat inside source list 1 pool aaa</p>
+<p>3.PAT<br>转换方式：多对1<br>原理：端口复用<br>使用场景：终端设备上网</p>
+<p>4.静态端口映射<br>PAT+静态<br>GW(config)#ip nat inside source static tcp 192.168.1.101 80 12.0.0.1 10000<br>GW(config)#ip nat inside source static tcp 192.168.1.102 80 12.0.0.1 20000</p>
+<p>PPP-point to point protocol<br>作用：<br>1）提供统一封装<br>R2(config)#int s1/0<br>R2(config-if)#encapsulation ppp<br>2）提供认证功能<br>两种认证<br>1）PAP<br>特点：步骤简单、密码明文<br>配置：<br>ISP<br>全局下：username sannet password 123456<br>接口下-开启认证<br>       ppp authentication pap</p>
+<p>Home<br>接口下-发送用户名密码<br>       ppp pap sent-username sannet password 123456</p>
+<p>2)CHAP<br>特点：步骤负责、密码安全<br>配置：<br>ISP<br>全局下：username sannet password 123456<br>接口下-开启认证<br>       ppp authentication chap</p>
+<p>Home<br>接口下-发送用户名密码<br>       ppp chap hostname sannet<br>       ppp chap password 123456</p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cisco-network/" rel="tag"># cisco,network</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/08/NP复习-1/" rel="next" title="NP复习-1">
+                <i class="fa fa-chevron-left"></i> NP复习-1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -392,6 +473,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -609,6 +694,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
 
   
 
