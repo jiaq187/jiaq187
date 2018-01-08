@@ -75,17 +75,17 @@
 
 
 
-<meta name="description" content="啦啦啦~">
+<meta name="description" content="有那么几天,我固执地以为自己长大了,我认为自己很坚强,我以为自己已经可以保护自己和其他我珍视的人了,但是,现实就是和我开了一个不大不小的玩笑,却足以让我崩塌了所有防线 也许是我之前的人生太顺利了吧,一点点的小事就可以击败我.我从未想过自己如此脆弱,会为了失败而哭,人们把这称为懦弱,当然,在我经历之前,我也这样称呼它,只是,如果接受失败就是懦弱,那么连失败都接受不了的人又称作什么呢? 人们眼中总是有">
 <meta property="og:type" content="website">
 <meta property="og:title" content="life">
 <meta property="og:url" content="http://yoursite.com/life/index.html">
 <meta property="og:site_name" content="永无止境">
-<meta property="og:description" content="啦啦啦~">
+<meta property="og:description" content="有那么几天,我固执地以为自己长大了,我认为自己很坚强,我以为自己已经可以保护自己和其他我珍视的人了,但是,现实就是和我开了一个不大不小的玩笑,却足以让我崩塌了所有防线 也许是我之前的人生太顺利了吧,一点点的小事就可以击败我.我从未想过自己如此脆弱,会为了失败而哭,人们把这称为懦弱,当然,在我经历之前,我也这样称呼它,只是,如果接受失败就是懦弱,那么连失败都接受不了的人又称作什么呢? 人们眼中总是有">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:updated_time" content="2018-01-08T09:26:28.025Z">
+<meta property="og:updated_time" content="2018-01-08T10:05:41.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="life">
-<meta name="twitter:description" content="啦啦啦~">
+<meta name="twitter:description" content="有那么几天,我固执地以为自己长大了,我认为自己很坚强,我以为自己已经可以保护自己和其他我珍视的人了,但是,现实就是和我开了一个不大不小的玩笑,却足以让我崩塌了所有防线 也许是我之前的人生太顺利了吧,一点点的小事就可以击败我.我从未想过自己如此脆弱,会为了失败而哭,人们把这称为懦弱,当然,在我经历之前,我也这样称呼它,只是,如果接受失败就是懦弱,那么连失败都接受不了的人又称作什么呢? 人们眼中总是有">
 
 
 
@@ -281,6 +281,290 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/NP复习-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaqiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="永无止境">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/08/NP复习-1/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-08T18:02:38+08:00">2018-01-08</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NP复习-1</title>
+</head>
+<body>
+一。OSI7层模型
+open system interconnection
+开放  系统    互联
+为什么要分层？
+降低难度----分工明确
+1.物理层：
+定义通信介质标准
+传递的内容：比特（bit）
+
+2.数据链路层
+传递的内容：frame
+|帧头|目的MAC|源MAC|类型/长度|数据|FCS|
+1)MAC--48比特
+2）FCS--检测校验
+2层的设备：交换机
+防冲突机制----------以太网CSMA/CD------令牌环（令牌）
+
+3.网络层
+1)IP地址、子网掩码
+IP地址的分类
+A.0-127             255.0.0.0              /8
+B.128-191           255.255.0.0            /16
+C.192-223           255.255.255.0          /24
+D.224-239
+E.240-255
+2)路由-----路径原则
+3层的设备：路由器，3层交换机
+
+4.传输层
+定义物流方式：报文是否可靠传输
+TCP:可靠-------重传------建立虚拟的链接通道---面向链接的-----3次握手（SYN,ACK）
+UDP：不可靠--不重传------没必要建立---------面向无链接的
+
+5.会话层
+
+6.表示层
+数据翻译
+</body>
+</html>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaqiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="永无止境">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/08/hello-world/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-08T18:02:38+08:00">2018-01-08</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>N</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -520,134 +804,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jiaqiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="永无止境">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-05T22:53:12+08:00">2018-01-05</time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -694,7 +850,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -702,15 +858,6 @@
 
               
 
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Tags</span>
-                  
-                </div>
               
             </nav>
           
