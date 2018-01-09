@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>永无止境</title>
+  <title>jiaqiang&#39;s blog</title>
   
   <subtitle>奋斗不息</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-08T12:17:59.152Z</updated>
+  <updated>2018-01-09T11:16:24.504Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello,world</title>
+    <link href="http://yoursite.com/2018/01/09/hello-world/"/>
+    <id>http://yoursite.com/2018/01/09/hello-world/</id>
+    <published>2018-01-09T11:11:31.000Z</published>
+    <updated>2018-01-09T11:16:24.504Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、忘掉岁月，忘掉痛苦，忘掉你的坏，我们永不永不说再见。<br>2、有的人，说不清哪里好，但就是，谁都替代不了。<br>3、给一个陌生人送上你的微笑吧。很可能，这是他一天中见到的唯一的阳光；很可能，是这辈子你们的仅有一次的遇见；很可能，他一辈子会记住这缕阳光。<br>4、我很单纯，最擅长丢掉包袱，绽开笑容。<br>5、如果你只是等待，发生的事情只会是你变老了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、忘掉岁月，忘掉痛苦，忘掉你的坏，我们永不永不说再见。&lt;br&gt;2、有的人，说不清哪里好，但就是，谁都替代不了。&lt;br&gt;3、给一个陌生人送上你的微笑吧。很可能，这是他一天中见到的唯一的阳光；很可能，是这辈子你们的仅有一次的遇见；很可能，他一辈子会记住这缕阳光。&lt;br&gt;4、我
+      
+    
+    </summary>
+    
+      <category term="life" scheme="http://yoursite.com/categories/life/"/>
+    
+    
+      <category term="mood" scheme="http://yoursite.com/tags/mood/"/>
+    
+  </entry>
   
   <entry>
     <title>NP复习-2</title>
