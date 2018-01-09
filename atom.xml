@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-09T12:59:15.889Z</updated>
+  <updated>2018-01-09T13:10:18.675Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NP复习-4</title>
+    <link href="http://yoursite.com/2018/01/09/NP%E5%A4%8D%E4%B9%A0-4/"/>
+    <id>http://yoursite.com/2018/01/09/NP复习-4/</id>
+    <published>2018-01-09T13:05:29.000Z</published>
+    <updated>2018-01-09T13:10:18.675Z</updated>
+    
+    <content type="html"><![CDATA[<p>eigrp的负载均衡：<br>实验：<br>1.等价的<br>确保R1上，看到192.168.1.0/24有两条相同metric的路由<br>2.实现不等价的效果<br>1）人为造出不等价效果（R1的链接R3的接口，把带宽改小）<br>2）检查R1的拓扑表和路由表，确保路由表中只有1条，拓扑表有2条<br>3）在R1的eigrp协议下，配置variance xx,确保路由表中实现不等价负载均衡</p><p>show ip route 192.168.1.0<br>show ip ei nei<br>show ip ei top<br>show ip route</p><p>什么样的路由将会放入拓扑表<br>—–次优路径的AD&lt;最优路径的FD，则次优路径才会进入拓扑表</p><p>eigrp的认证<br>1）定义key chain<br>R1(config)#key chain aaa———–可以两端不一样<br>R1(config-keychain)#key 1———-必须相同<br>R1(config-keychain-key)#key-string cisco—必须相同<br>2）接口下启动认证并调用key chain<br>R1(config-if)#ip authentication key-chain eigrp 100 aaa——如果启用认证，则采用key chain aaa的密码<br>R1(config-if)#ip authentication mode eigrp 100 md5 ——接口启用认证</p><p>关于DUAL<br>DUAL–弥散更新算法</p><p>DUAL算法的问题：<br>因为查询报文必须接受应答，如果没有或者缺少某个应答则可能造成SIA（stuck in active）<br>如何解决：<br>1)被动<br>该路由最多等待3分钟，如果时间到，没有回应的邻居，将被重置<br>2）主动防御—减少查询<br>eigrp stub</p><p>OSPF:链路状态–发送的内容：LSA(链路状态通告)<br>数据结构<br>1）邻居表<br>2）LSDB-链路状态数据库（拓扑表）<br>3）路由表<br>OSPF的防环设计思路：<br>1）所有非骨干区域必须跟骨干区域相连<br>2）非骨干区域之间不允许交互信息</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;eigrp的负载均衡：&lt;br&gt;实验：&lt;br&gt;1.等价的&lt;br&gt;确保R1上，看到192.168.1.0/24有两条相同metric的路由&lt;br&gt;2.实现不等价的效果&lt;br&gt;1）人为造出不等价效果（R1的链接R3的接口，把带宽改小）&lt;br&gt;2）检查R1的拓扑表和路由表，确保路由
+      
+    
+    </summary>
+    
+      <category term="network" scheme="http://yoursite.com/categories/network/"/>
+    
+      <category term="ccnp" scheme="http://yoursite.com/categories/network/ccnp/"/>
+    
+    
+      <category term="cisco,network" scheme="http://yoursite.com/tags/cisco-network/"/>
+    
+  </entry>
   
   <entry>
     <title>NP复习-3</title>

@@ -285,6 +285,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/NP复习-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaqiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiaqiang's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/09/NP复习-4/" itemprop="url">NP复习-4</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-09T21:05:29+08:00">2018-01-09</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/" itemprop="url" rel="index">
+                    <span itemprop="name">network</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/network/ccnp/" itemprop="url" rel="index">
+                    <span itemprop="name">ccnp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>eigrp的负载均衡：<br>实验：<br>1.等价的<br>确保R1上，看到192.168.1.0/24有两条相同metric的路由<br>2.实现不等价的效果<br>1）人为造出不等价效果（R1的链接R3的接口，把带宽改小）<br>2）检查R1的拓扑表和路由表，确保路由表中只有1条，拓扑表有2条<br>3）在R1的eigrp协议下，配置variance xx,确保路由表中实现不等价负载均衡</p>
+<p>show ip route 192.168.1.0<br>show ip ei nei<br>show ip ei top<br>show ip route</p>
+<p>什么样的路由将会放入拓扑表<br>—–次优路径的AD&lt;最优路径的FD，则次优路径才会进入拓扑表</p>
+<p>eigrp的认证<br>1）定义key chain<br>R1(config)#key chain aaa———–可以两端不一样<br>R1(config-keychain)#key 1———-必须相同<br>R1(config-keychain-key)#key-string cisco—必须相同<br>2）接口下启动认证并调用key chain<br>R1(config-if)#ip authentication key-chain eigrp 100 aaa——如果启用认证，则采用key chain aaa的密码<br>R1(config-if)#ip authentication mode eigrp 100 md5 ——接口启用认证</p>
+<p>关于DUAL<br>DUAL–弥散更新算法</p>
+<p>DUAL算法的问题：<br>因为查询报文必须接受应答，如果没有或者缺少某个应答则可能造成SIA（stuck in active）<br>如何解决：<br>1)被动<br>该路由最多等待3分钟，如果时间到，没有回应的邻居，将被重置<br>2）主动防御—减少查询<br>eigrp stub</p>
+<p>OSPF:链路状态–发送的内容：LSA(链路状态通告)<br>数据结构<br>1）邻居表<br>2）LSDB-链路状态数据库（拓扑表）<br>3）路由表<br>OSPF的防环设计思路：<br>1）所有非骨干区域必须跟骨干区域相连<br>2）非骨干区域之间不允许交互信息</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+       <div>
+    
+       </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/NP复习-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -965,7 +1127,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
