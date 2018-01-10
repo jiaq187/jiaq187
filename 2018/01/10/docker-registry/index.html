@@ -125,7 +125,7 @@
 
 
 
-  <title>NP复习-3 | jiaqiang's blog</title>
+  <title>docker_registry | jiaqiang's blog</title>
   
 
 
@@ -284,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/09/NP复习-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/docker-registry/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiaqiang">
@@ -301,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">NP复习-3</h1>
+          <h1 class="post-title" itemprop="name headline">docker_registry</h1>
         
 
         <div class="post-meta">
@@ -313,7 +313,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-09T20:57:48+08:00">2018-01-09</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T11:05:05+08:00">2018-01-10</time>
             
 
             
@@ -334,19 +334,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/ccnp/" itemprop="url" rel="index">
-                    <span itemprop="name">ccnp</span>
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
                   </a>
                 </span>
 
@@ -387,22 +376,17 @@
       
 
       
-        <p>eigrp：<br>一、特性：<br>1.EIGRP高级距离矢量协议——–MIXED混合型<br>                   发送的内容               路由表的形成<br>距离矢量协议       路由表的备份                学来的（自己不计算）<br>链路状态协议       LSA（链路状态通告）         自己算（自己有算法）</p>
-<p>eigrp的算法：DUAL（弥散更新算法）</p>
-<p>2.组播更新代替光比更新—–224.0.0.10</p>
-<p>路由协议：<br>1.邻居建立–内部机制—-排错<br>2.标准特性–手动汇总—认证<br>3.协议特性–DUAL</p>
-<p>接口下如何修改hello时间<br>interface s1/0<br>    ip hello-interval eigrp 100 10</p>
-<p>如果报文传输想可靠，有什么办法？<br>1.把该报文封装进TCP协议<br>2.协议本身自带ACK报文</p>
-<p>eigrp的数据结构：<br>相互发hello—–建立邻居表——-》相互发送路由———》形成拓扑表———》通过DUAL算法，选出最好的路由————-》路由表<br>show ip eigrp nei<br>show ip eigrp top<br>show ip route eigrp</p>
-<p>eigrp的metric计算：<br>1.BW计算：路由传递方向入向接口，最小带宽<br> 10^7/BW（单位KB）<br>2.DELAY计算：路由传递方向入向接口，延迟的总和<br>  单位（10微秒）</p>
-<p>关于eigrp的汇总<br>汇总的意义何在？——-有效的减少路由表的条目，提高路由器查表性能<br>为什么要关闭自动汇总？—-自动汇总会汇总过大，产生路由黑洞<br>为什么需要手动汇总？——好处：精确汇总，不产生黑洞<br>汇总的网络号应该如何计算？<br>案例：<br>192.168.0.0/24<br>192.168.1.0/24<br>1）转成2进制（相同的部分不需要转）<br>192.168.0000000 0. 00000000<br>192.168.0000000 1. 00000000<br>2）向前借位，逐个借位，满足所有可能<br>3）其余所有网络位必须相同<br>汇总后的网络号和子网掩码如何填写？<br>请写出最小的那个网络的网络号：192.168.0.0/23</p>
-<p>192.168.1.0/24<br>192.168.2.0/24<br>…………..<br>192.168.9.0/24<br>怎么汇总，既能够减少路由，又不会黑洞？<br>请描述出汇总后应该发送几条路由，以及描述分别是哪几条</p>
-<p>192.168.00000001.  0——-192.168.1.0/24</p>
-<p>192.168.0000001 0.  0——192.168.2.0/23<br>192.168.0000001 1.  0</p>
-<p>192.168.000001 00.  0——192.168.4.0/22<br>192.168.000001 01.  0<br>192.168.000001 10.  0<br>192.168.000001 11.  0</p>
-<p>192.168.0000100 0.  0——192.168.8.0/23<br>192.168.0000100 1.  0</p>
-<p>手动汇总如何配置？<br>**只能在路由传递的出接口方向做<br>interface e0/0<br>  ip summary-address eigrp 100 192.168.0.0 255.255.252.0<br>如何验证？<br>最简单的办法，到对端路由器看路由表</p>
-<p>汇总路由在本地的管理距离，默认是5</p>
+        <p>[root@localhost repositories]# cat /etc/redhat-release<br>CentOS Linux release 7.3.1611 (Core)</p>
+<p>[root@localhost repositories]# docker -v<br>Docker version 17.06.0-ce, build 02c1d87</p>
+<p>yum remove docker<br>yum remove docker-common<br>yum remove docker-selinux<br>yum remove docker-engine<br>yum install -y yum-utils device-mapper-persistent-data lvm2<br>方式一：curl -sSL <a href="https://get.daocloud.io/docker" target="_blank" rel="noopener">https://get.daocloud.io/docker</a> | sh<br>方式二：yum-config-manager –add-repo <a href="https://download.docker.com/linux/centos/docker-ce.repo" target="_blank" rel="noopener">https://download.docker.com/linux/centos/docker-ce.repo</a><br>yum install docker-ce</p>
+<p>systemctl start docker</p>
+<p>curl -sSL <a href="https://get.daocloud.io/daotools/set_mirror.sh" target="_blank" rel="noopener">https://get.daocloud.io/daotools/set_mirror.sh</a> | sh -s <a href="http://86ad833a.m.daocloud.io" target="_blank" rel="noopener">http://86ad833a.m.daocloud.io</a> #容器加速器</p>
+<p>私有仓库搭建 #registry hostIP:192.168.0.35:5000<br>docker run -d -p 5000:5000 -v /opt/registry:/var/lib/registry/ –name=humpback-registry daocloud.io/registry</p>
+<p>docker exec -it c1c89fa5f4c4 ls /var/lib/registry/docker/registry/v2/repositories/centos</p>
+<p>客户端：<br>vi /etc/docker/daemon.json<br>{ “insecure-registries”: [“192.168.0.35:5000”]  #registry hostIP:192.168.0.35:5000<br>docker tag daocloud.io/library/centos 192.168.0.35:5000/centos<br>docker push 192.168.0.35:5000/centos<br>docker pull 192.168.0.35:5000/tomcat:9.0</p>
+<p>遇到问题：1.http: server gave HTTP response to HTTPS client<br>解决方法：vi /etc/docker/daemon.json<br>{ “insecure-registries”: [“192.168.0.35:5000”]<br>重启docker</p>
+<p>2.docker run -d -p 5000:5000 –restart=always -v /opt/registry:/var/lib/registry/ -v /etc/docker/registry/config.yml:/etc/docker/registry/config.yml -e DOCKER_REGISTRY_CONFIG=/etc/docker/registry/config.yml –name=humpback-registry daocloud.io/registry<br>这样运行容器会报错，容器一直处于restart状态，config.yml为只读本地挂载不上。<br>docker logs 容器名</p>
+<p>浏览器访问仓库：<a href="http://192.168.0.35:5000/v2/tomcat/tags/list" target="_blank" rel="noopener">http://192.168.0.35:5000/v2/tomcat/tags/list</a></p>
 
       
     </div>
@@ -425,7 +409,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/cisco-network/" rel="tag"><i class="fa fa-tag"></i> cisco,network</a>
+            <a href="/tags/docker-registry/" rel="tag"><i class="fa fa-tag"></i> docker registry</a>
           
         </div>
       
@@ -438,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/09/hello-world/" rel="next" title="hello,world">
-                <i class="fa fa-chevron-left"></i> hello,world
+              <a href="/2018/01/09/NP复习-4/" rel="next" title="NP复习-4">
+                <i class="fa fa-chevron-left"></i> NP复习-4
               </a>
             
           </div>
@@ -447,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/09/NP复习-4/" rel="prev" title="NP复习-4">
-                NP复习-4 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
