@@ -79,14 +79,14 @@
 
 <meta name="description" content="人生实苦，但请你永远相信">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:title" content="分类">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="jiaqiang&#39;s blog">
 <meta property="og:description" content="人生实苦，但请你永远相信">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-09T12:42:56.426Z">
+<meta property="og:updated_time" content="2018-01-08T12:37:42.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="分类">
 <meta name="twitter:description" content="人生实苦，但请你永远相信">
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/categories/"/>
 
 
 
@@ -313,7 +313,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T13:36:25+08:00">2018-01-10</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T14:28:43+08:00">2018-01-10</time>
             
 
             
@@ -376,9 +376,28 @@
       
 
       
-        <p>$ git<br>$sudo yum install git<br>$ git config –global user.name “Your Name”<br>$ git config –global user.email “email@example.com”<br>$ mkdir learngit<br>$ cd learngit<br>初始化一个Git仓库，使用git init命令<br>加文件到Git仓库，分两步：<br>第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；<br>第二步，使用命令git commit，完成</file></p>
-<p>$ git log<br>$ git log –pretty=oneline<br>在Git中，用HEAD表示当前版本，也就是最新的提交3628… 上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。<br>git reset –hard 查看当前版本所在位置<br>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。<br>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本<br>$ git reflog</p>
-<p><img src="/2018/01/10/git/images/git/1.jpg" alt="git"></p>
+        <p>$ git<br>$sudo yum install git<br>$ git config –global user.name “Your Name”<br>$ git config –global user.email “email@example.com”<br>$ mkdir learngit<br>$ cd learngit<br>初始化一个Git仓库，使用git init命令<br>加文件到Git仓库，分两步：<br>第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；<br>第二步，使用命令git commit，完成。</file></p>
+<p>$ git log<br>$ git log –pretty=oneline<br>在Git中，用HEAD表示当前版本，也就是最新的提交3628… 上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。<br>git reset –hard 查看当前版本所在位置<br>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。<br>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本<br>$ git reflog<br>             <img src="/2018/01/10/git/1.jpg" alt=""><br>工作区（Working Directory）<br>就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区<br>版本库（Repository）<br>工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
+<p>分支和HEAD的概念我们以后再讲。<br>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。<br>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
+<p>Git管理的是修改，当你用git add命令后，在工作区的第一次修改被放入暂存区，准备提交，但是，在工作区的第二次修改并没有放入暂存区，所以，git commit只负责把暂存区的修改提交了，也就是第一次的修改被提交了，第二次的修改不会被提交。</p>
+<p>提交后，用git diff HEAD – readme.txt命令可以查看工作区和版本库里面最新版本的区别</p>
+<p>$ git diff HEAD – readme.txt</p>
+<p>理解了Git是如何跟踪修改的，每次修改，如果不add到暂存区，那就不会加入到commit中。</p>
+<p>git checkout – file可以丢弃工作区的修改：<br>$ git checkout – readme.txt<br>命令git checkout – readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>总之，就是让这个文件回到最近一次git commit或git add时的状态。<br>git checkout – file命令中的–很重要，没有–，就变成了“切换到另一个分支”的命令，我们在后面的分支管理中会再次遇到git checkout命令</p>
+<p>用命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区<br>小结<br>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file </p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+<p>$ git rm test.txt<br>$ git commit -m “remove test.txt”<br>命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。<br>远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库<br>git push -u  origin master<br>本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。<br>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p>从现在起，只要本地作了提交，就可以通过命令：<br>$ git push origin master</p>
+<p>小结<br>要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；<br>关联后，使用命令git push -u origin master第一次推送master分支的所有内容；<br>此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；<br>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
+<p>登陆GitHub，创建一个新的仓库，名字叫new<br>我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件：</p>
+<p>$git clone <a href="https://github.com/jiaq187/new.git" target="_blank" rel="noopener">https://github.com/jiaq187/new.git</a></p>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。<br>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快</p>
+<p>查看分支：git branch<br>创建分支：git branch <name><br>切换分支：git checkout <name><br>创建+切换分支：git checkout -b <name><br>合并某分支到当前分支：git merge <name><br>删除分支：git branch -d <name></name></name></name></name></name></p>
+<p>解决冲突<br>$ git checkout -b feature1<br>解决冲突<br>阅读: 598664<br>人生不如意之事十之八九，合并分支往往也不是一帆风顺的。<br>准备新的feature1分支，继续我们的新分支开发：<br>$ git checkout -b feature1<br>Switched to a new branch ‘feature1’<br>修改readme.txt最后一行，改为：<br>Creating a new branch is quick AND simple.<br>在feature1分支上提交：<br>$ git add readme.txt<br>$ git commit -m “AND simple”</p>
+<p>切换到master分支：<br>$ git checkout master</p>
+<p>在master分支上把readme.txt文件的最后一行改为：<br>Creating a new branch is quick &amp; simple.<br>$ git add readme.txt<br>$ git commit -m “&amp; simple”<br>$ git merge feature1<br>$ git status<br>修改如下后保存：<br>Creating a new branch is quick and simple.<br>$ git add readme.txt<br>$ git commit -m “conflict fixed”<br>$ git log –graph –pretty=oneline –abbrev-commit<br>最后，删除feature1分支：<br>$ git branch -d feature1<br>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>用git log –graph命令可以看到分支合并图<br>分支管理策略</p>
+<p>通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。<br>如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息<br>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。<br>$ git merge –no-ff -m “merge with no-ff” dev<br>在实际开发中，我们应该按照几个基本原则进行分支管理：<br>首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；<br>那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；<br>你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。<br>所以，团队合作的分支看起来就像这样：<br>       <img src="/2018/01/10/git/2.jpg" alt=""></p>
 
       
     </div>
