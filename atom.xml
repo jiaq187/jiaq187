@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-10T07:05:58.958Z</updated>
+  <updated>2018-01-16T09:20:53.402Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NP复习-5</title>
+    <link href="http://yoursite.com/2018/01/16/NP%E5%A4%8D%E4%B9%A0-5/"/>
+    <id>http://yoursite.com/2018/01/16/NP复习-5/</id>
+    <published>2018-01-16T09:19:32.000Z</published>
+    <updated>2018-01-16T09:20:53.402Z</updated>
+    
+    <content type="html"><![CDATA[<p>OSPF：<br>一、邻居<br>1.hello必须相同的参数：<br>hello时间：10S、30S</p><p>2.更新地址：224.0.0.5—–所有人<br>            224.0.0.6—–DR/BDR</p><p>3.多路访问网络更新有问题：<br>DR：指定路由器<br>BDR：备用指定路由器<br>DRother：其他路由器</p><p>4.DR/BDR的选举规则<br>1.选择接口优先级最大的成为DR（默认都是1、范围是0-255）<br>R3(config)#int e0/0<br>R3(config-if)#ip ospf priority 100<br>要想生效必须重新选举（重新建立邻居关系）<br>clear ip ospf process<br><strong>*</strong>优先级为0，则代表不参与选举<br>2.如果优先级一样，则选取router-id较大的</p><p>5.router-id的选举规则<br>1）手工配置最高<br>2）loopback口地址最大的（活跃的）<br>3）物理接口地址最大的（活跃的）</p><p>6.邻居的7种状态<br>1）down<br>没有ospf报文发送<br>2）init<br>接口发送hello<br>3）2-way<br>如果我收到一个hello，并且从这个hello中看到自己的router-id，则形成2-way状态<br>4）exstart（交换准备状态）<br>比router-id选出主从关系<br>5）exchange<br>交换summary of LSDB<br>6)loading<br>相互发送请求、更新和确认<br>7）full<br>邻居完全建立</p><p>二、OSPF的各种LSA（链路状态通告）介绍<br>如何看ospf的数据库<br>show ip ospf database<br>类型一：路由器LSA（router-lsa）<br>1）谁产生：域内每个路由器都会产生1条<br>2）内容是什么：1.描述“我”有几个接口，每个接口连着谁<br>               2.描述每个接口的IP地址、子网掩码、metric和链路类型<br>3）泛洪范围:一个区域内<br>4）作用：实现域内通信</p><p>类型二：network LSA(只有MA网络才会产生)<br>1）谁产生：DR<br>2）内容是什么：1.通告此MA的子网掩码<br>               2.通告此MA的所有参与者<br>3）泛洪范围： 一个区域内<br>4）作用：实现域内通信（类型一补充）</p><p>类型三：summary LSA(汇总LSA)<br>1）谁产生：ABR<br>2）内容是什么：类型1.2计算出的路由的网络号、掩码、metric<br>3）泛洪范围：AS内<br>4）作用：域间通信</p><p>类型五：external LSA（外部LSA）<br>1）谁产生：ASBR<br>2）内容是什么：跟类型三一样，路由的网络号、掩码、metric<br>3）泛洪范围：AS内<br>4）作用:外部网络通信</p><p>类型跨区域传递的过程中是不修改产生者的，会产生通信问题，所有用1种类型的LSA来解决此问题</p><p>类型四:asbr-summary LSA<br>1）谁产生：ABR<br>2）内容是什么：通告ASBR是谁<br>3）泛洪范围：AS内<br>4）作用：寻找ASBR</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;OSPF：&lt;br&gt;一、邻居&lt;br&gt;1.hello必须相同的参数：&lt;br&gt;hello时间：10S、30S&lt;/p&gt;
+&lt;p&gt;2.更新地址：224.0.0.5—–所有人&lt;br&gt;            224.0.0.6—–DR/BDR&lt;/p&gt;
+&lt;p&gt;3.多路访问网络更新有问题：&lt;b
+      
+    
+    </summary>
+    
+      <category term="cisco" scheme="http://yoursite.com/categories/cisco/"/>
+    
+    
+      <category term="cisco" scheme="http://yoursite.com/tags/cisco/"/>
+    
+  </entry>
   
   <entry>
     <title>git</title>
